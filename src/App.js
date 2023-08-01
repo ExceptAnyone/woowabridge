@@ -6,6 +6,7 @@ class App {
   play() {
     this.printStart();
     InputView.readBridgeSize();
+    OutputView.printMap();
   }
 
   printStart() {
