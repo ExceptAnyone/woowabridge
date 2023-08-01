@@ -1,10 +1,11 @@
-const MissionUtils = require("@woowacourse/mission-utils");
 const OutputView = require("./OutputView");
+const InputView = require("./InputView");
 const { MESSAGE } = require("../lib/constants");
 
 class App {
   play() {
     this.printStart();
+    InputView.readBridgeSize();
   }
 
   printStart() {
