@@ -1,6 +1,6 @@
 const MissionUtils = require("@woowacourse/mission-utils");
 const { MESSAGE } = require("../lib/constants");
-
+const Validate = require("./Validate");
 /**
  * 사용자로부터 입력을 받는 역할을 한다.
  */
@@ -12,6 +12,7 @@ const InputView = {
    */
   readBridgeSize() {
     MissionUtils.Console.readLine(MESSAGE.ENTER, (length) => {
+      Validate.bridgeLength(length);
       console.log(length);
     })
   },
